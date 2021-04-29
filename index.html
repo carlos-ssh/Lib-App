@@ -28,7 +28,7 @@
           <p class="card-text">The easiest way to manage your books in the same place.</p>
           
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary text-center mx-auto my-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <button type="button" class="btn btn-primary text-center mx-auto my-3" id="newBook" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             Create New Book
           </button>
         </div>
@@ -45,30 +45,30 @@
             <div class="modal-body form-container">
               <form id="newBookForm">
                 <div class="mb-3">
-                  <label for="BookTitle" class="form-label">Title:</label>
-                  <input type="text" class="form-control" id="BookTitle" aria-describedby="emailHelp">
+                  <label for="bookTitle" class="form-label">Title:</label>
+                  <input type="text" class="form-control" id="bookTitle" aria-describedby="emailHelp">
 
                 </div>
                 <div class="mb-3">
                   <label for="BookAuthor" class="form-label">Author:</label>
-                  <input type="text" class="form-control" id="BookAuthor" aria-describedby="emailHelp">
+                  <input type="text" class="form-control" id="bookAuthor" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                   <label for="NumberofPages" class="form-label">Numer of Pages:</label>
-                  <input type="number" class="form-control" id="NumberofPages" aria-describedby="emailHelp">
+                  <input type="number" class="form-control" id="numberOfPages" aria-describedby="" min="0" max="99999" >
                 </div>
                 <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="readIt">
                   <label class="form-check-label" for="readIt">Do you Read it?</label>
+                  <input type="checkbox" class="form-check-input btnToggleStatus" id="readIt">
                 </div>
                 
               
+                <div class="modal-footer container-fluid">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary" id="btnSubmit" >Submit</button>
+                </div>
+              </form>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-          </form>
           </div>
         </div>
       </div>
@@ -76,6 +76,14 @@
 
     </div>
     
+    <div class="container">
+      <div class="row">
+        <div class="card-container">
+
+        </div>
+      </div>
+    </div>
+
     <script src="main.js"></script>
 
     <!-- Bootstrap Bundle -->
